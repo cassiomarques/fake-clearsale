@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem "rake"
 gem "rack", "1.2.3"
 gem "sinatra"
+gem "nokogiri"
 
 group :test, :development do
   gem "pry"

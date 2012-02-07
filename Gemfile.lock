@@ -10,6 +10,7 @@ GEM
     guard-rspec (0.6.0)
       guard (>= 0.10.0)
     method_source (0.7.0)
+    nokogiri (1.5.0)
     pry (0.9.8.1)
       coderay (~> 1.0.5)
       method_source (~> 0.7)
@@ -42,6 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   guard-rspec
+  nokogiri
   pry
   pry-doc
   rack (= 1.2.3)
