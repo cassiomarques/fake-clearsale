@@ -1,0 +1,20 @@
+require 'rspec'
+require 'rack/test'
+require "pry"
+
+ENV ||= {}
+ENV["SINATRA_ENV"] = "test"
+
+$:.unshift File.dirname(File.expand_path(__FILE__)) + "/lib"
+require "fake_clearsale"
+Dir[File.dirname(__FILE__) + "/support/*.rb"].each { |f| require f }
+
+def app
+  FakeClearsale::App
+end
+
+RSpec.configure do |config|
+  require 'rspec/expectations'
+  config.include RSpec::Matchers
+  config.include Rack::Test::Methods
+end
