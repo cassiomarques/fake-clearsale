@@ -4,6 +4,10 @@ gem "rake"
 gem "rack", "1.2.3"
 gem "sinatra"
 gem "nokogiri"
+gem "redis"
+gem "settingslogic"
+gem "yajl-ruby"
+gem "cs-httpi"
 
 group :test, :development do
   gem "pry"

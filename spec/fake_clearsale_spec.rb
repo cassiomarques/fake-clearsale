@@ -2,8 +2,16 @@
 require 'spec_helper'
 
 describe FakeClearsale::App do
+  before do
+    HTTPI.stub(:post)
+  end
+
   describe "POST SendOrders" do
     it "should respond approved as status" do
+      HTTPI.should_receive(:post)
+           .with(an_instance_of(HTTPI::Request))
+           .and_return(true)
+
       post "/SendOrders", {
         :xml => make_clearsale_xml("Fulano Confiavel", "1234")
       }
