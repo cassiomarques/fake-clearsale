@@ -8,6 +8,7 @@ gem "redis"
 gem "settingslogic"
 gem "yajl-ruby"
 gem "cs-httpi"
+gem "unicorn"
 
 group :test, :development do
   gem "pry"
