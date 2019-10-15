@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem "rake"
-gem "rack", "1.2.3"
+gem "rack", "1.6.11"
 gem "sinatra"
 gem "nokogiri"
 gem "redis"
